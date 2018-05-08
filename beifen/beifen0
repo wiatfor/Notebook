@@ -1,0 +1,71 @@
+1.切换python版本：
+  sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100
+  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150
+  sudo update-alternatives --config python
+2.pip 
+  sudo apt-get install python3-pip
+  sudo apt-get install python-pip 
+3.sudo dpkg -i xxxx.deb
+  tar -xzvf xxxx.tar.gz /xxx/xx/.. (解压)
+4.安装搜狗输入法:
+  http://blog.csdn.net/leijiezhang/article/details/53707181
+5.蓝灯安装
+	https://github.com/getlantern/lantern
+　　https://zhidao.baidu.com/question/2268944455793962908.html
+6.Tensorflow-gpu 
+  sudo apt-get install nvidia-xxx
+  …
+  sudo pip3 install tensorflow-gpu
+  对应版本sudo apt-get install cuda8.0  ##  tensorflow-gpu 1.4.0  ---   cuda8.0  ---cudnn6
+  http://blog.csdn.net/seven_year_promise/article/details/78390882   #资源
+  http://blog.csdn.net/u014595019/article/details/53732015     # 教程
+7.运行bin文件
+ sudo chmod +x  xxxx.bin
+ sudo ./xxx.bin
+
+
+
+
+
+
+
+
+
+
+
+7. 安装mujoco
+ https://github.com/openai/mujoco-py
+ ## Mjpro安装位置在（~/.mujoco）---更换key.txt   （期限1年）
+ python 3.5.2
+ Mjpro131 对应 mujoco 0.5.7版本
+ Mjpro150 对应mujoco 1.5.0版本
+ 安装gym[all]时 会自动安装 mujoco 0.5.7(只需配置好Mjpro)
+  //  pip3 install mujoco-py==0.5.7
+ #测试 
+    import gym
+    env = gym.make("Humanoid-v1")
+    env.reset()
+    for i in range(1000):
+	  env.render()
+	  env.step(env.action_space.sample())
+
+8. 安装gym-gazebox
+  https://github.com/erlerobot/gym-gazebo/blob/master/INSTALL.md#ubuntu-1604
+  http://blog.csdn.net/zhangdadadawei/article/details/78906103
+ Basic requirements:
+ROS Kinetic (/rosversion: 1.12.7)
+Gazebo 8.1.1
+Python 3.5.2
+OpenCV3, installed from sources for Python 3 
+OpenAI gym
+  ①Ros Kinetic  ---(Ubuntu16.04)            ## Ros Indigo --ubuntu 14.04
+      *** 需要在Python2环境下安装×××过程中可能需翻墙×××
+       http://blog.csdn.net/weicao1990/article/details/52575314
+       http://wiki.ros.org/kinetic/Installation/Ubuntu
+  ②Gazebo
+http://gazebosim.org/tutorials?tut=install_ubuntu&cat=install
+  ③ OpenCV
+sudo pip3 install opencv-python
+
+
+
